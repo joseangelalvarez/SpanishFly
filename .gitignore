@@ -10,6 +10,9 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Copilot internal agent skills (not a GitHub feature)
+.github/skills/
+
 # Persona local runtime artifacts
 Persona/venv/
 Persona/.tools/
