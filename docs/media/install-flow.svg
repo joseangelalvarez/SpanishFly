@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-label="Flujo de instalacion SpanishFly">
+  <rect width="1280" height="420" fill="#0e1f2b"/>
+  <text x="64" y="72" fill="#e6f7ff" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Flujo de instalacion en 1 clic</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#d9eef8">
+    <rect x="64" y="130" width="350" height="210" rx="18" fill="#143245"/>
+    <text x="96" y="188" font-weight="700">1. Doble clic</text>
+    <text x="96" y="228">setup_spanishfly.bat</text>
+
+    <rect x="466" y="130" width="350" height="210" rx="18" fill="#16405a"/>
+    <text x="498" y="188" font-weight="700">2. Preparacion automatica</text>
+    <text x="498" y="228">uv + Python + entornos</text>
+    <text x="498" y="264">Chequeo de requisitos</text>
+
+    <rect x="868" y="130" width="350" height="210" rx="18" fill="#16546f"/>
+    <text x="900" y="188" font-weight="700">3. Listo para crear</text>
+    <text x="900" y="228">Descarga opcional de modelos</text>
+    <text x="900" y="264">Apertura de Launcher</text>
+  </g>
+  <g stroke="#66c7e8" stroke-width="6" fill="none" opacity="0.9">
+    <path d="M422 235 L458 235"/>
+    <path d="M824 235 L860 235"/>
+  </g>
+</svg>

@@ -5,6 +5,13 @@ SpanishFly is a modular AI content suite focused on creators who want pro result
 Today you can build high quality characters with Persona.
 Next, the suite expands to Storyboard, Video, and Voice.
 
+![SpanishFly Hero](docs/media/hero-spanishfly.svg)
+
+## Latest Release
+
+- Current version: v0.1.0
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+
 ## Why SpanishFly
 
 - Local-first generation workflow.
@@ -49,6 +56,8 @@ Installer stack:
 - uv (automatic Python bootstrap when Python is not installed)
 
 ## One-Click Install (Recommended)
+
+![Install Flow](docs/media/install-flow.svg)
 
 ### Option A: Full Suite (double click)
 
@@ -139,6 +148,7 @@ Notes:
 Double click launch paths:
 - setup_spanishfly.bat
 - Persona/setup_persona.bat
+- open_spanishfly.bat (abre la app sin reinstalar)
 
 Manual launch:
 
