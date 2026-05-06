@@ -1,93 +1,118 @@
-# SpanishFly Suite (Deutsch)
+# SpanishFly Suite — Deutsch
 
-SpanishFly ist eine modulare lokale KI-Content-Suite fur Creator, die professionelle Ergebnisse ohne technische Komplexitat wollen.
+SpanishFly ist eine modulare lokale KI-Inhaltssuite fur Creator, die professionelle Ergebnisse ohne technische Komplexitat wollen.
 
 ![SpanishFly Hero](docs/media/hero-spanishfly.svg)
 
-## Warum SpanishFly
+---
 
-- Local-first Generierungsworkflow
-- One-click Installation fur nicht technische Nutzer
-- Gefuhrte Systemprufungen vor der Installation
-- Modulare Architektur fur komplette Produktionspipeline
+## Was du vor dem Start benotigst
 
-## Aktueller Stand
+Stelle vor der Installation sicher, dass du Folgendes hast:
 
-- Verfugbar: Persona (Charaktergenerierung)
-- Roadmap: Storyboard, Video, Stimme
+- **Windows 10 oder Windows 11** (64 Bit)
+- **Mindestens 16 GB RAM** und **30 GB freier Speicherplatz**
+- **NVIDIA GPU empfohlen** mit 8 GB VRAM oder mehr (funktioniert auch ohne GPU, aber viel langsamer)
+- **Internetverbindung** fur die Installation und den Modell-Download
+- Ein **kostenloses Hugging Face Konto**, um die KI-Modelle herunterzuladen (siehe Schritt 2)
 
-## One-click Installation
+---
 
-- Gesamte Suite (Doppelklick): setup_spanishfly.bat
-- Nur Persona (Doppelklick): Persona/setup_persona.bat
-- App ohne Neuinstallation offnen: open_spanishfly.bat
+## Schritt 1 — Projekt herunterladen
 
-Python muss nicht vorinstalliert sein.
-Der Installer kann uv laden und Python 3.10 automatisch einrichten.
+1. Klicke auf den grunen **Code**-Button oben auf dieser GitHub-Seite
+2. Wahle **Download ZIP**
+3. Entpacke den ZIP-Ordner irgendwo auf deinem Computer (z.B. Desktop oder `C:\SpanishFly`)
 
-## Mindestanforderungen
+> Du kannst auch mit Git klonen, wenn du weist wie: `git clone https://github.com/joseangelalvarez/SpanishFly.git`
 
-- Windows 10/11
-- PowerShell 5.1+
-- Internet fur Setup
+---
 
-Persona Checks:
-- OS empfohlen build >= 19045
-- RAM >= 16 GB
-- Freier Speicher >= 30 GB
-- NVIDIA GPU empfohlen (VRAM >= 8 GB)
+## Schritt 2 — Hugging Face Konto und Token erstellen
 
-Status im Installer:
-- OK
-- WARN
-- ERROR
+SpanishFly ladt seine KI-Modelle von Hugging Face herunter. Du benotigst ein kostenloses Konto und einen Zugriffstoken.
 
-Verhalten:
-- ERROR stoppt Installation
-- WARN fragt nach Bestatigung
+1. Erstelle ein Konto auf [https://huggingface.co/join](https://huggingface.co/join)
+2. Verifiziere deine E-Mail und melde dich an
+3. Gehe zu [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+4. Klicke auf **New token**, wahle Typ **Read** und gib ihm einen Namen (z.B. `spanishfly`)
+5. Kopiere den Token — er beginnt mit `hf_...` — du wirst ihn wahrend der Installation brauchen
 
-## CLI Installation
+> Der Token wird nur auf deinem Computer gespeichert, in `Persona/data/hf_credentials.json`. Teile ihn niemals.
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\setup_spanishfly.ps1
-```
+---
 
-Modelle ohne Rueckfragen laden:
+## Schritt 3 — Installer ausfuhren
 
-```powershell
-.\setup_spanishfly.ps1 -DownloadPersonaModels -SkipModelPrompt -HfUsername "DEIN_USER" -HfToken "hf_xxx"
-```
+1. Offne den Ordner, in den du SpanishFly entpackt hast
+2. **Doppelklicke** auf die Datei **`setup_spanishfly.bat`**
+3. Wenn Windows fragt, ob du der Datei vertraust, klicke auf **"Trotzdem ausfuhren"**
+4. Der Installer offnet sich in einem schwarzen Fenster (Konsole) und erledigt alles automatisch:
+   - Systemvoraussetzungen prufen und dich warnen, wenn etwas unter dem Minimum liegt
+   - Python 3.10 automatisch installieren (du musst es nicht selbst installieren)
+   - Eine isolierte Arbeitsumgebung erstellen
+   - Alle Abhangigkeiten installieren
+   - Fragen, ob du die KI-Modelle jetzt herunterladen mochtest (drucke J oder Y und gib deinen Hugging Face Token ein)
+5. Die erste Installation kann **10 bis 40 Minuten** dauern, je nach Internetgeschwindigkeit und ob du Modelle herunterlädst
 
-## Hugging Face Kurzguide
+> Wenn Windows das PowerShell-Skript blockiert, fuhre zuerst in PowerShell aus: `Set-ExecutionPolicy -Scope Process Bypass`
 
-1. Konto erstellen: https://huggingface.co/join
-2. Email verifizieren und anmelden
-3. Token erstellen: https://huggingface.co/settings/tokens
-4. Read Token erstellen und kopieren
+---
 
-Token wird lokal gespeichert in Persona/data/hf_credentials.json.
+## Schritt 4 — App offnen
 
-## Persona Editor Guide
+- Wenn die Installation abgeschlossen ist, offnet sich die App automatisch
+- Um sie spater ohne Neuinstallation zu offnen, **doppelklicke** auf **`open_spanishfly.bat`**
 
-Hauptfelder:
-- Charaktername (Pflicht)
-- Basisbild (optional)
-- Charakterprompt (Pflicht)
-- Bildstil
-- Negativprompt (fix + editierbar)
+---
 
-Generierungssteuerung:
-- Steps, CFG, Size, Seed Modus
-- ControlNet + Pose
-- NSFW Toggle
+## Was SpanishFly heute enthalt
 
-## Ausgaben
+- **Persona** — KI-Charakter-Editor: Generiere Charakterbilder aus einer Beschreibung, einem Referenzbild und Stileinstellungen
+- **Storyboard, Video, Stimme** — In Entwicklung
 
-- Bilder: Persona/outputs/personas/<name>/
-- Daten: Persona/data/personas/<name>.json
+---
+
+## Wichtige Dateien auf einen Blick
+
+| Datei | Zweck |
+|---|---|
+| `setup_spanishfly.bat` | Installiert alles (Doppelklick) |
+| `open_spanishfly.bat` | Offnet die App ohne Neuinstallation |
+| `Persona/setup_persona.bat` | Installiert nur das Persona-Modul |
+
+---
+
+## Was der Installer pruft
+
+Der Installer pruft dein System und zeigt eine Ergebnistabelle:
+
+| Status | Bedeutung |
+|---|---|
+| OK | Anforderung erfullt |
+| WARN | Warnung: du kannst fortfahren, aber die Leistung kann geringer sein |
+| ERROR | Anforderung nicht erfullt: Installation stoppt bis zur Behebung |
+
+---
+
+## Persona Editor Anleitung
+
+Sobald du in der App bist, im Persona-Editor:
+
+- **Charaktername** (Pflicht): identifiziert und speichert den Charakter
+- **Referenzbild** (optional): Foto oder Bild, das das Modell als Stilbasis verwendet
+- **Prompt** (Pflicht): Charakterbeschreibung — Englisch liefert die besten Ergebnisse
+- **Bildstil**: visuelles Preset, das automatisch angewendet wird
+- **Negativprompt**: was das Modell vermeiden soll (vorkonfiguriert, editierbar)
+- **Steps / CFG / Grosse / Seed**: erweiterte Generierungssteuerung
+- **ControlNet**: aktiviert Posenkontrolle mit einem Referenzbild
+- **NSFW-Modus**: aktiviert das alternative Modell (erfordert vorherigen Download)
+
+Generierte Bilder werden in `Persona/outputs/personas/<name>/` gespeichert.
+
+---
 
 ## Sicherheit
 
-- Persona/data/hf_credentials.json nie veroffentlichen
-- Schwere Modelle und Outputs nicht in Git Historie speichern
+- Veroffentliche `Persona/data/hf_credentials.json` nicht in einem offentlichen Repository
+- Modelldateien und generierte Bilder sind standardmasig aus der Git-Historie ausgeschlossen

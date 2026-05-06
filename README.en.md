@@ -1,93 +1,118 @@
-# SpanishFly Suite (English)
+# SpanishFly Suite — English
 
-SpanishFly is a modular AI content suite focused on creators who want professional results without technical complexity.
+SpanishFly is a modular local AI content suite for creators who want professional results without technical complexity.
 
 ![SpanishFly Hero](docs/media/hero-spanishfly.svg)
 
-## Why SpanishFly
+---
 
-- Local-first generation workflow
-- One-click install for non-technical users
-- Guided system checks before setup
-- Modular architecture for a full production pipeline
+## What you need before starting
 
-## Current Status
+Before installing, make sure you have:
 
-- Available now: Persona (character generation)
-- In roadmap: Storyboard, Video, Voice
+- **Windows 10 or Windows 11** (64-bit)
+- **At least 16 GB of RAM** and **30 GB of free disk space**
+- **NVIDIA GPU recommended** with 8 GB VRAM or more (CPU works too, but is much slower)
+- **Internet connection** for installation and model download
+- A **free Hugging Face account** to download the AI models (see step 2)
 
-## One-Click Install
+---
 
-- Full suite (double click): setup_spanishfly.bat
-- Persona only (double click): Persona/setup_persona.bat
-- Open app without reinstall: open_spanishfly.bat
+## Step 1 — Download the project
 
-No Python pre-installation is required.
-The installer can download uv and bootstrap Python 3.10 automatically.
+1. Click the green **Code** button at the top of this GitHub page
+2. Select **Download ZIP**
+3. Extract the ZIP folder somewhere on your computer (e.g., Desktop or `C:\SpanishFly`)
 
-## Minimum Requirements
+> You can also clone with Git if you know how: `git clone https://github.com/joseangelalvarez/SpanishFly.git`
 
-- Windows 10/11
-- PowerShell 5.1+
-- Internet connection for setup
+---
 
-Persona checks:
-- OS recommended build >= 19045
-- RAM >= 16 GB
-- Free disk >= 30 GB
-- NVIDIA GPU recommended (VRAM >= 8 GB)
+## Step 2 — Create your Hugging Face account and token
 
-Check statuses shown by installer:
-- OK
-- WARN
-- ERROR
+SpanishFly downloads its AI models from Hugging Face. You need a free account and an access token.
 
-Behavior:
-- ERROR stops install
-- WARN asks confirmation
+1. Create an account at [https://huggingface.co/join](https://huggingface.co/join)
+2. Verify your email and sign in
+3. Go to [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
+4. Click **New token**, select type **Read**, and give it a name (e.g., `spanishfly`)
+5. Copy the token — it starts with `hf_...` — you will need it during installation
 
-## CLI Install
+> The token is stored only on your computer, in `Persona/data/hf_credentials.json`. Never share it.
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\setup_spanishfly.ps1
-```
+---
 
-Model download without prompts:
+## Step 3 — Run the installer
 
-```powershell
-.\setup_spanishfly.ps1 -DownloadPersonaModels -SkipModelPrompt -HfUsername "YOUR_USER" -HfToken "hf_xxx"
-```
+1. Open the folder where you extracted SpanishFly
+2. **Double-click** the file **`setup_spanishfly.bat`**
+3. If Windows asks whether you trust the file, click **"Run anyway"**
+4. The installer will open in a black window (console) and do everything automatically:
+   - Check your system requirements and warn you if something is below the minimum
+   - Install Python 3.10 automatically (you do not need to install it yourself)
+   - Create an isolated working environment
+   - Install all dependencies
+   - Ask whether you want to download the AI models now (press Y and enter your Hugging Face token)
+5. The first installation can take **10 to 40 minutes** depending on your internet speed and whether you download models
 
-## Hugging Face Quick Guide
+> If Windows blocks the PowerShell script, run this first in PowerShell: `Set-ExecutionPolicy -Scope Process Bypass`
 
-1. Create account: https://huggingface.co/join
-2. Verify email and sign in
-3. Create token: https://huggingface.co/settings/tokens
-4. Create a Read token and copy it
+---
 
-Token is stored locally in Persona/data/hf_credentials.json.
+## Step 4 — Open the app
 
-## Persona Editor Guide
+- When the installation finishes, the app opens automatically
+- To open it again in the future without reinstalling, **double-click** **`open_spanishfly.bat`**
 
-Main fields:
-- Character name (required)
-- Base image (optional)
-- Character prompt (required)
-- Image style
-- Negative prompt (fixed + editable)
+---
 
-Main generation controls:
-- Steps, CFG, Size, Seed mode
-- ControlNet toggle + pose
-- NSFW model toggle
+## What SpanishFly includes today
 
-## Outputs
+- **Persona** — AI character editor: generate character images from a description, reference image, and style settings
+- **Storyboard, Video, Voice** — Coming soon
 
-- Images: Persona/outputs/personas/<name>/
-- Character data: Persona/data/personas/<name>.json
+---
+
+## Important files at a glance
+
+| File | Purpose |
+|---|---|
+| `setup_spanishfly.bat` | Installs everything (double-click) |
+| `open_spanishfly.bat` | Opens the app without reinstalling |
+| `Persona/setup_persona.bat` | Installs only the Persona module |
+
+---
+
+## What the installer checks
+
+The installer verifies your system and shows a results table:
+
+| Status | Meaning |
+|---|---|
+| OK | Requirement met |
+| WARN | Warning: you can continue but performance may be lower |
+| ERROR | Requirement not met: installation stops until you fix it |
+
+---
+
+## Persona editor guide
+
+Once inside the app, in the Persona editor:
+
+- **Character name** (required): identifies and saves the character
+- **Reference image** (optional): photo or image the model will use as a style base
+- **Prompt** (required): character description — English gives the best results
+- **Image style**: visual preset applied automatically
+- **Negative prompt**: what the model should avoid (pre-configured, editable)
+- **Steps / CFG / Size / Seed**: advanced generation controls
+- **ControlNet**: enables pose control with a reference image
+- **NSFW mode**: activates the alternative model (requires prior download)
+
+Generated images are saved in `Persona/outputs/personas/<name>/`.
+
+---
 
 ## Security
 
-- Do not publish Persona/data/hf_credentials.json
-- Keep model files and outputs out of Git history
+- Do not upload `Persona/data/hf_credentials.json` to any public repository
+- Model files and generated images are excluded from Git history by default
