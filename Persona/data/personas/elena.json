@@ -1,0 +1,30 @@
+{
+  "name": "elena",
+  "base_image_path": "",
+  "created_at": "2026-05-01T21:36:06Z",
+  "notes": "",
+  "base_prompt": "fantasma siniestro y horrible, espectral, terrorifico, expresion de dolor y terror, cuencas vacias, belleza espectral",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\penywyse\\penywyse_20260502_204305.png",
+  "last_generation_metadata": {
+    "device": "cuda",
+    "dtype": "float16",
+    "generated_at": "2026-05-01T22:50:07Z",
+    "guidance_scale": 4.0,
+    "height": 1216,
+    "image_style": "photorealism",
+    "negative_prompt_fixed": "deformed anatomy, disfigured, malformed face, bad eyes, cross-eyed, bad hands, extra fingers, missing fingers, fused fingers, extra limbs, missing limbs, artifact, jpeg artifacts, blurry, lowres, text, watermark, logo, worst quality",
+    "negative_prompt_user": "",
+    "prompt_composed": "style: photorealistic portrait, realistic skin texture, natural light. macho conquistador español musculoso, botas, mirada penetrante, expresion imponente, masculino, pelo corto, pecho desnudo, brazos musculosos",
+    "prompt_token_count": 59,
+    "prompt_truncated": false,
+    "reference_strength": 0.13,
+    "sampler": "DPM++ 2M SDE",
+    "schedule_type": "Exponential",
+    "seed": 3156032426,
+    "seed_mode": "fixed",
+    "steps": 10,
+    "used_base_image": true,
+    "used_ip_adapter": false,
+    "width": 832
+  }
+}

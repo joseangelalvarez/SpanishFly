@@ -1,0 +1,22 @@
+# Root environment
+venv/
+.tools/
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code and OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Persona local runtime artifacts
+Persona/venv/
+Persona/.tools/
+Persona/models/
+Persona/outputs/
+Persona/data/hf_credentials.json
+Persona/__pycache__/
+
+# Generic logs
+*.log

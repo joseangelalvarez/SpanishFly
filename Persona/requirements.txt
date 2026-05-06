@@ -1,0 +1,34 @@
+# SpanishFly Persona - Dependencias base (sin PyTorch)
+# PyTorch se instala por separado en setup_persona.ps1
+# segun la arquitectura GPU detectada en el sistema del usuario.
+# Actualizado para arquitecturas Blackwell (CUDA 12.8)
+
+# UI
+PySide6==6.11.0
+
+# Procesamiento de imágenes
+numpy==2.2.6
+pillow==12.1.1
+opencv-python==4.11.0.86
+einops==0.8.2
+
+# Core de inferencia
+diffusers==0.37.1
+transformers==5.5.4
+accelerate==1.13.0
+
+# ONNX Runtime para modelos de detección facial (InsightFace)
+onnxruntime-gpu==1.20.1
+
+git+https://github.com/deepinsight/insightface.git#subdirectory=python-package
+
+# Modelos y pesos
+safetensors==0.7.0
+peft==0.19.1
+tokenizers==0.22.2
+
+# HuggingFace Hub
+huggingface-hub==1.11.0
+
+# Configuración
+omegaconf==2.3.0

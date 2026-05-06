@@ -1,0 +1,43 @@
+{
+  "runtime": {
+    "device_preference": "cuda",
+    "dtype": "float16",
+    "height": 1216,
+    "width": 832,
+    "steps": 35,
+    "guidance_scale": 4.0,
+    "seed": 2554065581,
+    "negative_prompt": ""
+  },
+  "models": {
+    "sdxl_base_path": "models/juggernaut/base",
+    "sdxl_hf_repo": "RunDiffusion/Juggernaut-XI-v11",
+    "sdxl_nsfw_path": "models/pony/nsfw",
+    "sdxl_nsfw_hf_repo": "John6666/pornworks-real-porn-ponyv04-sdxl",
+    "controlnet_paths": [
+      "models/controlnet/pose"
+    ],
+    "controlnet_hf_repos": [
+      "xinsir/controlnet-union-sdxl-1.0"
+    ],
+    "ip_adapter_paths": {
+      "face": "models/ip_adapters/face",
+      "style": "models/ip_adapters/face"
+    },
+    "ip_adapter_subfolders": {
+      "face": "sdxl_models",
+      "style": "sdxl_models"
+    },
+    "ip_adapter_weights": {
+      "face": "ip-adapter-plus-face_sdxl_vit-h.safetensors",
+      "style": "ip-adapter-plus_sdxl_vit-h.safetensors"
+    },
+    "ip_adapter_hf_repos": {
+      "face": "h94/IP-Adapter",
+      "style": "h94/IP-Adapter"
+    }
+  },
+  "outputs": {
+    "base_dir": "outputs/personas"
+  }
+}

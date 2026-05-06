@@ -1,0 +1,33 @@
+{
+  "name": "robot",
+  "base_image_path": "",
+  "created_at": "2026-05-02T21:02:38Z",
+  "notes": "",
+  "base_prompt": "full body, estilo realista, robot estilizado modernista, formas simples , curvas simples, minimalista, dinamico",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\robot\\robot_20260502_211015.png",
+  "last_generation_metadata": {
+    "controlnet_enabled": true,
+    "controlnet_pose_path": "D:\\SpanishFly\\Persona\\models\\controlnet\\pose\\images\\tpose_01.png",
+    "device": "cuda",
+    "dtype": "float16",
+    "generated_at": "2026-05-02T21:10:33Z",
+    "guidance_scale": 1.0,
+    "height": 1216,
+    "image_style": "fantasy",
+    "negative_prompt_fixed": "deformed anatomy, disfigured, malformed face, bad eyes, cross-eyed, bad hands, extra fingers, missing fingers, fused fingers, extra limbs, missing limbs, artifact, jpeg artifacts, blurry, lowres, text, watermark, logo, worst quality",
+    "negative_prompt_user": "rostro humano",
+    "prompt_composed": "style: fantasy art style, epic atmosphere, dramatic light. full body, estilo realista, robot estilizado modernista, formas simples , curvas simples, minimalista, dinamico",
+    "prompt_token_count": 45,
+    "prompt_truncated": false,
+    "reference_strength": 0.75,
+    "sampler": "DPM++ 2M SDE",
+    "schedule_type": "Exponential",
+    "seed": 1719458244,
+    "seed_mode": "fixed",
+    "steps": 10,
+    "used_base_image": false,
+    "used_controlnet": true,
+    "used_ip_adapter": false,
+    "width": 832
+  }
+}

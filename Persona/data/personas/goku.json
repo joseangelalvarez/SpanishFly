@@ -1,0 +1,30 @@
+{
+  "name": "goku",
+  "base_image_path": "",
+  "created_at": "2026-05-02T14:56:11Z",
+  "notes": "",
+  "base_prompt": "full body, guerrero con pantalon naranja, pecho descubierto, pelo nego puntiagudo, musculoso, super saygan  from the dragon balls",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\goku\\goku_20260502_150225.png",
+  "last_generation_metadata": {
+    "device": "cuda",
+    "dtype": "float16",
+    "generated_at": "2026-05-02T15:02:51Z",
+    "guidance_scale": 4.0,
+    "height": 1216,
+    "image_style": "photorealism",
+    "negative_prompt_fixed": "deformed anatomy, disfigured, malformed face, bad eyes, cross-eyed, bad hands, extra fingers, missing fingers, fused fingers, extra limbs, missing limbs, artifact, jpeg artifacts, blurry, lowres, text, watermark, logo, worst quality",
+    "negative_prompt_user": "",
+    "prompt_composed": "style: photorealistic portrait, realistic skin texture, natural light. full body, guerrero con pantalon naranja, pecho descubierto, pelo nego puntiagudo, musculoso, super saygan  from the dragon balls",
+    "prompt_token_count": 49,
+    "prompt_truncated": false,
+    "reference_strength": 0.75,
+    "sampler": "DPM++ 2M SDE",
+    "schedule_type": "Exponential",
+    "seed": 1823107145,
+    "seed_mode": "fixed",
+    "steps": 35,
+    "used_base_image": false,
+    "used_ip_adapter": false,
+    "width": 832
+  }
+}

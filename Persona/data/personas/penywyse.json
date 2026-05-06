@@ -1,0 +1,33 @@
+{
+  "name": "penywyse",
+  "base_image_path": "",
+  "created_at": "2026-05-02T20:33:14Z",
+  "notes": "",
+  "base_prompt": "fantasma siniestro y horrible, espectral, terrorifico, expresion de dolor y terror, cuencas vacias, belleza espectral",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\penywyse\\penywyse_20260502_204305.png",
+  "last_generation_metadata": {
+    "controlnet_enabled": true,
+    "controlnet_pose_path": "D:\\SpanishFly\\Persona\\models\\controlnet\\pose\\images\\standing_03.png",
+    "device": "cuda",
+    "dtype": "float16",
+    "generated_at": "2026-05-02T20:43:44Z",
+    "guidance_scale": 4.0,
+    "height": 1152,
+    "image_style": "fantasy",
+    "negative_prompt_fixed": "deformed anatomy, disfigured, malformed face, bad eyes, cross-eyed, bad hands, extra fingers, missing fingers, fused fingers, extra limbs, missing limbs, artifact, jpeg artifacts, blurry, lowres, text, watermark, logo, worst quality",
+    "negative_prompt_user": "",
+    "prompt_composed": "style: fantasy art style, epic atmosphere, dramatic light. fantasma siniestro y horrible, espectral, terrorifico, expresion de dolor y terror, cuencas vacias, belleza espectral",
+    "prompt_token_count": 45,
+    "prompt_truncated": false,
+    "reference_strength": 0.75,
+    "sampler": "DPM++ 2M SDE",
+    "schedule_type": "Exponential",
+    "seed": 108184558,
+    "seed_mode": "fixed",
+    "steps": 35,
+    "used_base_image": false,
+    "used_controlnet": true,
+    "used_ip_adapter": false,
+    "width": 896
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "functional_test",
+  "base_image_path": "",
+  "created_at": "2026-05-01T00:17:20Z",
+  "notes": "Prueba funcional automatizada",
+  "base_prompt": "portrait, cinematic lighting, detailed face, vertical composition",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\functional_test\\functional_test_20260501_001656.png",
+  "last_generation_metadata": {
+    "device": "cuda",
+    "dtype": "float16",
+    "width": 512,
+    "height": 896,
+    "steps": 2,
+    "guidance_scale": 7.5,
+    "seed": null,
+    "used_base_image": false,
+    "used_ip_adapter": false,
+    "generated_at": "2026-05-01T00:17:11Z"
+  }
+}

@@ -1,0 +1,7 @@
+venv/
+data/hf_credentials.json
+outputs/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

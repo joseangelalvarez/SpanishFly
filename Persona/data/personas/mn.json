@@ -1,0 +1,20 @@
+{
+  "name": "mn",
+  "base_image_path": "",
+  "created_at": "2026-04-30T23:56:02Z",
+  "notes": "",
+  "base_prompt": "un hombre desnudo",
+  "last_generated_image": "D:\\SpanishFly\\Persona\\outputs\\personas\\mn\\mn_20260430_235623.png",
+  "last_generation_metadata": {
+    "device": "cuda",
+    "dtype": "float16",
+    "generated_at": "2026-04-30T23:57:13Z",
+    "guidance_scale": 7.5,
+    "height": 1920,
+    "seed": null,
+    "steps": 30,
+    "used_base_image": false,
+    "used_ip_adapter": false,
+    "width": 1080
+  }
+}
