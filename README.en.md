@@ -6,6 +6,20 @@ SpanishFly is a modular local AI content suite for creators who want professiona
 
 ---
 
+## Simple installation (recommended)
+
+If you are not technical, just follow these steps:
+
+1. Download the repository ZIP and extract it.
+2. Open the SpanishFly folder.
+3. Double-click `setup_spanishfly.bat`.
+4. Answer installer prompts (if asked for Hugging Face token, paste your `hf_...`).
+5. Wait until setup finishes. The app opens automatically.
+
+You do not need to install Python or run terminal commands.
+
+---
+
 ## What you need before starting
 
 Before installing, make sure you have:
@@ -64,6 +78,8 @@ SpanishFly downloads its AI models from Hugging Face. You need a free account an
 - When the installation finishes, the app opens automatically
 - To open it again in the future without reinstalling, **double-click** **`open_spanishfly.bat`**
 
+If you only want Persona, use `Persona/setup_persona.bat`.
+
 ---
 
 ## What SpanishFly includes today
@@ -106,7 +122,8 @@ Once inside the app, in the Persona editor:
 - **Negative prompt**: what the model should avoid (pre-configured, editable)
 - **Steps / CFG / Size / Seed**: advanced generation controls
 - **ControlNet**: enables pose control with a reference image
-- **NSFW mode**: activates the alternative model (requires prior download)
+
+Models are selected automatically based on project type.
 
 Generated images are saved in `Persona/outputs/personas/<name>/`.
 
@@ -116,3 +133,16 @@ Generated images are saved in `Persona/outputs/personas/<name>/`.
 
 - Do not upload `Persona/data/hf_credentials.json` to any public repository
 - Model files and generated images are excluded from Git history by default
+
+---
+
+## Quick troubleshooting
+
+1. Installer window closes immediately:
+   - Right-click `setup_spanishfly.bat` and choose "Run as administrator".
+2. PowerShell blocks scripts:
+   - Run in PowerShell: `Set-ExecutionPolicy -Scope Process Bypass`
+3. Model download fails:
+   - Check your token starts with `hf_` and has Read permission.
+4. Generation is very slow:
+   - Without NVIDIA GPU, Persona runs on CPU and will be much slower.

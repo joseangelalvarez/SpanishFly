@@ -6,6 +6,20 @@ SpanishFly es una suite modular de contenido con IA local, pensada para creadore
 
 ---
 
+## Instalacion simple (recomendada)
+
+Si no tienes experiencia tecnica, sigue solo estos pasos:
+
+1. Descarga el ZIP del repositorio y extraelo.
+2. Entra en la carpeta SpanishFly.
+3. Haz doble clic en `setup_spanishfly.bat`.
+4. Responde a las preguntas del instalador (si te pide token de Hugging Face, pega tu `hf_...`).
+5. Espera a que termine. La app se abre sola.
+
+No necesitas instalar Python ni tocar comandos.
+
+---
+
 ## Que necesitas antes de empezar
 
 Antes de instalar, asegurate de tener:
@@ -64,6 +78,8 @@ Los modelos de IA de SpanishFly se descargan desde Hugging Face. Necesitas una c
 - Al terminar la instalacion, la aplicacion se abre automaticamente
 - Para volver a abrirla en el futuro sin reinstalar, haz **doble clic** en **`open_spanishfly.bat`**
 
+Si solo quieres instalar Persona, usa `Persona/setup_persona.bat`.
+
 ---
 
 ## Que incluye SpanishFly hoy
@@ -106,7 +122,8 @@ Una vez dentro de la app, en el editor Persona:
 - **Prompt negativo**: lo que el modelo debe evitar (ya configurado, puedes editar)
 - **Steps / CFG / Tamano / Seed**: controles avanzados de generacion
 - **ControlNet**: activa control de pose con imagen de referencia
-- **Modo NSFW**: activa el modelo alternativo (requiere descarga previa)
+
+Los modelos se seleccionan automaticamente segun el tipo de proyecto.
 
 Las imagenes generadas se guardan en `Persona/outputs/personas/<nombre>/`.
 
@@ -116,3 +133,16 @@ Las imagenes generadas se guardan en `Persona/outputs/personas/<nombre>/`.
 
 - No subas `Persona/data/hf_credentials.json` a ningun repositorio publico
 - Los modelos y las imagenes generadas estan excluidos del historial de Git por defecto
+
+---
+
+## Solucion de problemas rapida
+
+1. La ventana se cierra al instante:
+   - Haz clic derecho en `setup_spanishfly.bat` y elige "Ejecutar como administrador".
+2. PowerShell bloquea scripts:
+   - Ejecuta en PowerShell: `Set-ExecutionPolicy -Scope Process Bypass`
+3. Error al descargar modelos:
+   - Verifica que el token empiece por `hf_` y que tenga permisos de lectura.
+4. Muy lento al generar:
+   - Sin GPU NVIDIA se usa CPU, que es mucho mas lenta.

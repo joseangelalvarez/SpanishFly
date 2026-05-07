@@ -27,3 +27,22 @@ Multi-language README index.
 - Install full suite (double click): setup_spanishfly.bat
 - Install Persona only (double click): Persona/setup_persona.bat
 - Open app without reinstall: open_spanishfly.bat
+
+## Beginner Quick Start (Windows)
+
+1. Download this repository as ZIP and extract it.
+2. Double-click `setup_spanishfly.bat`.
+3. Accept prompts in the installer window.
+4. If asked, enter your Hugging Face token (`hf_...`) to download missing models.
+5. When setup finishes, SpanishFly opens automatically.
+
+No manual Python installation is required. The installer sets up Python, virtual environments, and dependencies automatically.
+
+## Readme By Language
+
+- Spanish full guide: README.es.md
+- English full guide: README.en.md
+- French guide: README.fr.md
+- German guide: README.de.md
+- Italian guide: README.it.md
+- Portuguese guide: README.pt.md
