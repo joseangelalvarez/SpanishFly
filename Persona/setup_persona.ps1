@@ -56,6 +56,13 @@ function Write-Ok   { param($msg) Write-Host "    OK: $msg" -ForegroundColor Gre
 function Write-Fail { param($msg) Write-Host "    ERROR: $msg" -ForegroundColor Red }
 function Write-Info { param($msg) Write-Host "    INFO: $msg" -ForegroundColor Magenta }
 
+function Test-IsWindowsHost {
+    if (Get-Variable -Name IsWindows -Scope Global -ErrorAction SilentlyContinue) {
+        return [bool]$Global:IsWindows
+    }
+    return [Environment]::OSVersion.Platform -eq [PlatformID]::Win32NT
+}
+
 function Read-YesNo {
     param(
         [Parameter(Mandatory = $true)][string]$Question,
@@ -87,7 +94,7 @@ function Test-SystemRequirements {
     }
 
     # SO: solo Windows y build minima recomendada
-    if (-not $IsWindows) {
+    if (-not (Test-IsWindowsHost)) {
         Add-CheckResult -Requirement "Sistema operativo" -Status "ERROR" -Detail "No compatible. Persona requiere Windows."
     } else {
         try {
